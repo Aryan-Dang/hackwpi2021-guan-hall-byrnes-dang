@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WPI Hackathon 2021 Project</title>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/oqe6ulv.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }} ">
+  </head>
+
+  <body class="grid-container" onload="loadConversations()"> 
+
+    <header class="flex-container">
+        <img src="{{ url_for('static', filename='images/logo-01.png') }}" alt="logo" class="logo"  onclick="window.location.href = 'index.html';"/>
+    
+        <button class="secondary_button" onclick="window.location.href = 'user.html';">
+          Profile Page
+        </button>
+    </header>
+
+    <nav class="group-nav">
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-01.png') }}" alt="major group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-02.png') }}" alt="class group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-03.png') }}" alt="class group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-04.png') }}" alt="class group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+    </nav>
+
+    <nav class="convo-nav" id="convo">
+      <h3>Conversations</h3>
+      <p>General</p>
+      <p>Announcements</p>
+    </nav>
+
+    <section class="main">
+      <p id="text">This is some test HTML. Words are a thing. I don't really know what else to say.</p>
+
+      <button class="primary_button" onclick="match()">
+          Find someone to talk to
+      </button>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus tortor lectus, non suscipit justo lobortis id. Curabitur id odio ac elit suscipit dignissim sollicitudin vel quam. Nam non nisi at lacus accumsan varius non at sapien. Aliquam erat volutpat. Donec nec lorem eu nulla viverra ullamcorper. Suspendisse laoreet sagittis tortor, a rutrum nunc malesuada ullamcorper. Nunc neque massa, finibus at justo nec, dictum aliquam sapien. Nunc dapibus odio ac sem imperdiet vestibulum eget vel quam.
+
+Aliquam ac ex vel libero ultricies aliquam. Vestibulum lobortis nunc non tellus dignissim, ac condimentum dui commodo. Sed varius tellus eros, vitae eleifend dolor porta euismod. In pharetra laoreet lacus, eget vehicula turpis laoreet at. Suspendisse potenti. Nunc pretium nisl elit, vitae sagittis massa pulvinar sit amet. Proin a dui at ligula molestie sodales. Aenean nec dui auctor, porttitor tortor at, aliquet nulla.
+
+Duis posuere erat eu malesuada bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed id tellus ipsum. Suspendisse ut velit id dolor pretium pretium eget eu neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a diam est. Mauris a nunc in felis iaculis vestibulum at et mi. Sed malesuada pulvinar lectus ut faucibus. Nunc sodales hendrerit nisi, et semper leo pellentesque non. Praesent eu nisi neque. Duis id nibh vel turpis efficitur rutrum. Praesent vulputate elit a ex dignissim ullamcorper at sed quam. Integer hendrerit sem nibh, consequat ultricies dui scelerisque sed. Integer varius justo vel sem sodales posuere et sed leo. Quisque in lacus ut nunc ultrices tincidunt rutrum quis purus.
+
+Nam ac consectetur velit, consectetur dapibus libero. Donec erat leo, volutpat in tempus id, fermentum vitae lacus. Integer id dictum nulla. Quisque quis scelerisque diam. Fusce at odio eros. Nulla pharetra risus in accumsan euismod. Proin sed aliquet ante. Nam aliquet lacus ante, non rhoncus felis feugiat vitae. Mauris tristique nunc mi, ut laoreet leo feugiat eu. Curabitur gravida gravida mauris, ac tristique ex egestas suscipit.
+
+Nullam ac enim ut eros scelerisque auctor. Suspendisse a est sed eros ornare tincidunt ac sed leo. Donec non congue urna. Sed diam tellus, eleifend eget lorem congue, sollicitudin pulvinar quam. Nunc dui enim, pellentesque a urna non, convallis dignissim justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam lacinia eleifend pretium.
+      </p>
+    </section>
+
+  </body>
+</html>

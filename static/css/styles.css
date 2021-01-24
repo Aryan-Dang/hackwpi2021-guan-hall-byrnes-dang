@@ -1,0 +1,288 @@
+/* css file for sandpiper website */
+html {
+    min-width: 200px;
+    min-height: 600px;
+}
+
+body{
+    background-color: #C8CFD6;
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 48pt;
+    color: black;
+}
+
+h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 36pt;
+    color: black;
+}
+
+h3 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 20pt;
+    color: black;
+
+}
+
+h4 {
+    font-family: exo-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 28pt;
+    color: black;
+
+}
+
+h5 {
+    font-family: exo-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20pt;
+    color: white;
+}
+
+h6 {
+    font-family: exo-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16pt;
+    color: black;
+}
+
+p {
+    font-family: exo-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20pt;
+    color: black;
+}
+
+header {
+    width: 100vw;
+    height: 10vh;
+    min-height: 65px;
+    box-sizing: border-box;
+    background-color: #AC2B37;
+    margin: none;
+    padding: none;
+    border: 2px solid black;
+    grid-area: header;
+    grid-column: first end;
+}
+
+nav {
+    background-color: #C8CFD6;
+    border: 2px solid black;
+}
+
+.group_nav {
+    grid-area: group;
+    margin-top: 5vh;
+}
+
+section {
+    background-color: #C8CFD6;
+}
+
+.convo_nav {
+    grid-area: convo;
+    margin: 5px;
+}
+
+nav h3 {
+    text-align: center;
+}
+
+nav p {
+    text-align: center;
+}
+
+nav p:hover {
+    color: #AC2B37;
+}
+
+.main {
+    grid-area: main;
+    padding-right: 5vw;
+    overflow: auto;
+    margin-left: 5%;
+    box-sizing: border-box;
+}
+
+.no_convo {
+    grid-column-start: convo;
+    grid-column-end: main;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+
+a:link {
+    color:  #AC2B37;
+}
+
+a:visited {
+    color:  #981723;
+}
+
+a:hover {
+    color:  #F2717D;
+}
+
+button {
+    margin: 4px 9px;
+    font-family: exo-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20pt;
+    color: black;
+    padding: 4px 9px;
+    border-radius: 4px;
+}
+
+div {
+    font-family: exo-soft, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20pt;
+    color: black;
+    margin: 0;
+    padding: 0;
+    max-height: 85vh;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 6vw 18vw 76vw;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: 
+      "header header header"
+      "group convo main";
+}
+
+.active {
+    background-color: black;
+}
+
+.group_icon {
+    height: 5vw;
+}
+
+.group_icon:hover {
+    background-color:AC2B37;
+}
+
+.primary_button {
+    background-color: #AC2B37;
+    color: white;
+    border: none;
+}
+
+.primary_button:hover {
+    background-color: #F2717D;
+}
+
+.secondary_button {
+    background-color: #A9B0B7;
+    border: none;
+}
+
+.secondary_button:hover {
+    background-color: #C8CFD6;
+}
+
+.tertiary_button {
+    background-color: rgba(0,0,0,0.0);
+    color: black;
+}
+
+.tertiary_button:hover {
+    color: #AC2B37;
+}
+
+.no_line_break {
+    display: inline-block;
+}
+
+@media screen and (max-width: 1100px){
+        section {
+            margin-left: 10%;
+        }
+}
+
+@media screen and (max-width: 900px){
+    section {
+        margin-left: 15%;
+    }
+
+    .float_image {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 750px){
+    section {
+        margin-left: 20%;
+    }
+
+    .float_image {
+        width: 100%;
+        float: none;
+    }
+
+    .carousel {
+        visibility: hidden;
+        height:0px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #main_nav {
+        visibility: hidden;
+        width:0px;
+    }
+
+    section {
+        grid-area: sidebar main;
+        margin-left: 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+    
+    .horizontal_nav {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-height: 700px){
+    #main_nav {
+        visibility: hidden;
+        width:0px;
+    }
+
+    section {
+        grid-area: sidebar main;
+        margin-left: 0;
+        margin-top: 2%;
+    }
+
+    .carousel{
+        visibility: hidden;
+        height:0px;
+    }
+}
