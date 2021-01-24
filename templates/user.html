@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>WPI Hackathon 2021 Project | Profile</title>
+
+    <script src="{{ url_for('static', filename='user.js') }}"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/oqe6ulv.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+
+  <body class="grid-container" onload="idShow()"> 
+
+    <header class="flex-container">
+      <img src="{{ url_for('static', filename='images/logo-01.png') }}" alt="logo" class="logo"  onclick="window.location.href = 'index.html';"/>
+    
+      <button class="secondary_button" onclick="window.location.href = 'user.html';">
+        Profile Page
+      </button>
+    </header>
+
+    <nav class="group-nav">
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-01.png') }}" alt="major group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-02.png') }}" alt="class group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-03.png') }}" alt="class group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/group-icon-04.png') }}" alt="class group" class="group_icon"  onclick="window.location.href = 'index.html';"/>
+      </p>
+    </nav>
+
+    <section class="no_convo">
+      <h1>John Doe's Profile</h1>
+      <p class="no_line_break">
+        <button id="discord_button" class="secondary_button no_line_break" onclick="togglePrivacy('discord')">Make Private</button>
+        <div class="no_line_break">Discord: </div>
+        <div id="discord_id" class="no_line_break"></div>
+      </p>
+
+      <button class="primary_button" onclick="window.location.href = 'index.html';">
+          Back
+      </button>
+    </section>
+  </body>
+</html>
